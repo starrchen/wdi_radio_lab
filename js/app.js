@@ -19,16 +19,17 @@
       controller: "SongIndexController",
       controllerAs: "SongIndexViewModel"
     })
+    .state("songNew", {
+      url: "/songs/new",
+      templateUrl: "js/songs/views/new.html",
+      controller: "SongNewController",
+      controllerAs: "SongNewViewModel"
+    })
     .state("songShow", {
       url: "/songs/:id",
       templateUrl: "js/songs/views/show.html",
       controller: "SongShowController",
       controllerAs: "SongShowViewModel"
-    })
-    .state("songNew", {
-      url: "/songs/new",
-      controller: "SongNewController",
-      controllerAs: "SongNewViewModel"
     });
   }
 }());
