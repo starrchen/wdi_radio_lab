@@ -2,3 +2,7 @@
 <h2><em>{{SongShowViewModel.song.artist}}</em></h2>
 <img data-ng-src="{{SongShowViewModel.song.album_art}}">
 <p>Genre: {{SongShowViewModel.song.genre}}</p>
+
+<form>
+  <button data-ng-click="SongShowViewModel.destroy()">Delete Song</button>
+</form>
