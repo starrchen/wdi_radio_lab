@@ -1,9 +1,12 @@
 <h1>{{SongShowViewModel.song.title}}</h1>
 <h2><em>{{SongShowViewModel.song.artist}}</em></h2>
-<img data-ng-src="{{SongShowViewModel.song.album_art}}">
 <p>Genre: {{SongShowViewModel.song.genre}}</p>
+<p><img data-ng-src="{{SongShowViewModel.song.album_art}}"></p>
+<audio controls>
+  <source src="{{SongShowViewModel.song.audio_url}}" type="audio/mpeg">
+</audio>
 
-<a data-ui-sref="songEdit({id: song.id})">Edit Song</a>
+<p><a data-ui-sref="songEdit({id: SongShowViewModel.song.id})">Edit Song</a></p>
 
 <form>
   <button data-ng-click="SongShowViewModel.destroy()">Delete Song</button>
