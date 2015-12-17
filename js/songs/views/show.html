@@ -3,6 +3,8 @@
 <img data-ng-src="{{SongShowViewModel.song.album_art}}">
 <p>Genre: {{SongShowViewModel.song.genre}}</p>
 
+<a data-ui-sref="songEdit({id: song.id})">Edit Song</a>
+
 <form>
   <button data-ng-click="SongShowViewModel.destroy()">Delete Song</button>
 </form>

@@ -13,6 +13,10 @@
 
   function RouterFunction($stateProvider){
     $stateProvider
+    .state("welcome", {
+      url: "/",
+      template: "Welcome to the World's Best Song App!"
+    })
     .state("songIndex", {
       url: "/songs",
       templateUrl: "js/songs/views/index.html",
@@ -30,6 +34,12 @@
       templateUrl: "js/songs/views/show.html",
       controller: "SongShowController",
       controllerAs: "SongShowViewModel"
+    })
+    .state("songEdit", {
+      url: "/songs/:id/edit",
+      templateUrl: "js/songs/views/edit.html",
+      controller: "SongEditController",
+      controllerAs: "SongEditViewModel"
     });
   }
 }());
