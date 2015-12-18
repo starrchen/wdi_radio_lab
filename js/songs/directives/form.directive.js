@@ -13,12 +13,19 @@
           formType: '@'
         },
         link: function(scope){
+
           scope.create = function(){
-            console.dir(scope.song);
             scope.song.$save(scope.song, function(song){
               $state.go('songShow', song, {reload: true})
             });
+          },
+
+          scope.update = function(){
+            scope.song.$update({id: scope.song.id}, function(song){
+              $state.go('songShow', song, {reload: true})
+            })
           }
+
         }
       }
     }]

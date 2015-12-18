@@ -10,10 +10,7 @@
     ]);
 
   function SongEditControllerFunction( SongFactory, $stateParams ){
-    console.dir(SongFactory  )
-    console.log($stateParams.id);
     this.song = SongFactory.get({id: $stateParams.id})
-    console.log(this.song);
     this.update = function(){
       this.song.$update({id: $stateParams.id});
     }
