@@ -1,7 +1,14 @@
 <div>
 
   <div ng-show="formType == 'new'">
-    New form stuff
+    <form>
+      <input placeholder="Song title" data-ng-model="song.title" />
+      <input placeholder="Artist name" data-ng-model="song.artist" />
+      <input placeholder="Audio URL" data-ng-model="song.audio_url" />
+      <input placeholder="Album art URL" data-ng-model="song.album_art" />
+      <input placeholder="Genre" data-ng-model="song.genre" />
+      <button type="button" data-ng-click="create()">Create</button>
+    </form>
   </div>
 
   <form ng-show="formType == 'edit'">
