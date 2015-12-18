@@ -24,6 +24,12 @@
             scope.song.$update({id: scope.song.id}, function(song){
               $state.go('songShow', song, {reload: true})
             })
+          },
+
+          scope.destroy = function(){
+            scope.song.$delete({id: scope.song.id}, function(){
+              $state.go('songIndex')
+            })
           }
 
         }
