@@ -17,10 +17,14 @@
     <script src="js/songs/controllers/show.controller.js"></script>
     <script src="js/songs/controllers/edit.controller.js"></script>
     <script src="js/songs/directives/form.directive.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-cookie/4.0.9/angular-cookie.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ng-token-auth/0.0.28/ng-token-auth.min.js"></script>
+    <script src="js/users/sessions.controller.js"></script>
   </head>
 
   <body>
     <header><h1><a data-ui-sref="songIndex">WDI Radio</a></h1></header>
+    <auth-nav></auth-nav>
     <main data-ui-view></main>
   </body>
 
